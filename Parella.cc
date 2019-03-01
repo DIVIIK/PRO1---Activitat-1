@@ -38,6 +38,15 @@ void Parella::afegeixMembre(const Membre &membre) {
 
 Membre Parella::consultaMembre(const string &dni) {
 	Membre mem;
+	bool trobat = false;
+	int i = 0;
+	while (not trobat and i < this->nmembres) {
+		if (this->membres[i].dni == dni) {
+			mem = this->membres[i];
+			trobat = true;
+		}
+		++i;
+	}
 	return mem;
 }
 
