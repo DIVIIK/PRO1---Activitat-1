@@ -1,4 +1,4 @@
-
+include "Parella.h"
 
 Parella:Parella() {
 	/* Pre: cert */
