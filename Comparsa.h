@@ -21,7 +21,7 @@ public:
 	Comparsa(const string &sigles, const string &nom, const bool ecocaramels);
 
 	~Comparsa();
-	
+
 	//Modificadors
 	void afegeixParella(const Parella &parella);
 
@@ -29,7 +29,7 @@ public:
 
 	//Consultors
 	Parella consultaParella(const int id) const;
-	string consultaSigles();
+	string consultaSigles() const;
 
 	friend ostream& operator<<(ostream &os, const Comparsa &comparsa);
 
