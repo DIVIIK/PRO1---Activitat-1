@@ -51,5 +51,5 @@ Membre Parella::consultaMembre(const string &dni) {
 }
 
 int Parella::consultaIdentificador() {
-
+	return this->id;
 }
