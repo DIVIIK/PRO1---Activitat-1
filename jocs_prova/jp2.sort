@@ -1,0 +1,60 @@
+Opcio: -2
+Parella 1 Angels Jaume 38501485T 38598456M
+ afegida a : UNIO
+Opcio: -2
+Parella 2 Marta Lluis 38333485R 37798456Z
+ afegida a : UNIO
+Opcio: -2
+Parella 1 Alicia Josep 55333485S 88798456V
+ afegida a : ESPA
+Opcio: -2
+Parella 2 Anna Joan 55333775W 88008456L
+ afegida a : ESPA
+Opcio: -2
+Parella 1 Raquel Cristian 99333485M 88792356C
+ afegida a : DANS
+Opcio: -2
+Parella 2 Vicky Carles 52233775K 88008499Z
+ afegida a : DANS
+Opcio: -2
+Aquesta Parella no es pot afegir DANS
+Opcio: -3
+Llistat de Comparsas: 
+
+(UNIO, uniovilanovina, 0)
+Llistat de Parelles:
+1 Angels Jaume 38501485T 38598456M
+2 Marta Lluis 38333485R 37798456Z
+
+(DANS, dansaires, 0)
+Llistat de Parelles:
+1 Raquel Cristian 99333485M 88792356C
+2 Vicky Carles 52233775K 88008499Z
+
+(CANP, canpistraus, 0)
+Llistat de Parelles:
+
+(FALC, falcons, 0)
+Llistat de Parelles:
+
+(ESPA, espavila, 0)
+Llistat de Parelles:
+1 Alicia Josep 55333485S 88798456V
+2 Anna Joan 55333775W 88008456L
+
+(AGRU, agrupacio, 0)
+Llistat de Parelles:
+
+Opcio: -4
+Canviada la informació ecoCarament a la Comparsa : AGRU
+Opcio: -4
+Canviada la informació ecoCarament a la Comparsa : CANP
+Opcio: -1
+(AGRU, agrupacio, 1)
+Llistat de Parelles:
+
+Opcio: -1
+(CANP, canpistraus, 1)
+Llistat de Parelles:
+
+Opcio: -5
