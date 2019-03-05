@@ -44,6 +44,7 @@ int main() {
     creaComparses(comparses);
 
     cin >> opcio;
+    cout << "Opcio: " << opcio << endl;
     while (opcio != -5) {
       switch (opcio) {
         case -1:
@@ -63,6 +64,7 @@ int main() {
           break;
       }
       cin >> opcio;
+      cout << "Opcio: " << opcio << endl;
     }
 
 
