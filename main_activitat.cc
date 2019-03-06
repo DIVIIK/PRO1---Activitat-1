@@ -20,7 +20,7 @@ void mostrarComparsa(const vector<Comparsa> &comparses) {
   /* Post: imprimeix pel canal estandar de sortida les dades de la comparsa */
   string sigles;
   unsigned int i = 0;
-  bool trobat;
+  bool trobat = false;
   cin >> sigles;
 
   while(not trobat and i < comparses.size()) {
@@ -39,7 +39,7 @@ void afegirParella(vector<Comparsa> &comparses) {
   /* Post: nova parella afegida a la comparsa */
   string sigles;
   unsigned int i = 0;
-  bool trobat;
+  bool trobat = false;
   cin >> sigles;
 
   while(not trobat and i < comparses.size()) {
@@ -99,10 +99,4 @@ int main() {
       cin >> opcio;
       cout << "Opcio: " << opcio << endl;
     }
-
-
-
-
-
-
 }
