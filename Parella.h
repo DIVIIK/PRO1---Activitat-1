@@ -6,11 +6,7 @@ using namespace std;
 class Parella {
 
 private:
-    typedef struct {
-        string nom;
-        string dni;
-    }Membre;
-
+    typedef struct Membre membre;
     vector<Membre> membres;
     int id;
     int nmembres;
@@ -33,7 +29,7 @@ public:
     //Consultors
     Membre consultaMembre(const string &dni) const;
 
-    int consultaIdentificador()const ;
+    int consultaIdentificador() const;
 
     friend ostream& operator<<(ostream &os, const Parella &parella);
 

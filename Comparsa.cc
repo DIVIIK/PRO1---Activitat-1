@@ -84,12 +84,10 @@ ostream & operator << (ostream &os, const Comparsa &comparsa) {
 		if(i+1 < comparsa.parelles.size())
 			os << cout << endl;
 	}
-
 	return os;
 }
 
-/*
-// Repasar
 istream& operator>>(istream &is, Comparsa &comparsa) {
-	is >> this->sigles >> this->nom >> this->ecocaramels >> this->parelles;
-}*/
+	is >> comparsa.sigles;
+	return is;
+}
