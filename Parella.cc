@@ -54,3 +54,14 @@ void Parella::afegeixMembre(const Membre &membre){
 int Parella::consultaIdentificador(){
 	return this->id;
 }
+
+ostream& operator<<(ostream &os, const Parella &parella) {
+	os << this->id << " " << this->membres[0].name <<
+		" " << this->membres[1].name << " " << this->membres[0].dni <<
+		" " << this->membres[1].dni;
+}
+
+istream& operator>>(istream &is, Parella &parella) {
+	is >> this->id >> this->membres[0].name >> this->membres[1].name
+		>> this->membres[0].dni >> this->membres[1].dni;
+}

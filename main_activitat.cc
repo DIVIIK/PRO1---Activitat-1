@@ -56,6 +56,8 @@ void afegirParella(vector<Comparsa> &comparses) {
     Parella p;
     cin >> p;
     comparses[i].afegeixParella(p);
+    cout << "Parella " << p << endl;
+    cout << " afegida a " << sigles << endl;
   }
 }
 
