@@ -33,7 +33,7 @@ public:
     //Consultors
     Membre consultaMembre(const string &dni) const;
 
-    int consultaIdentificador();
+    int consultaIdentificador()const ;
 
     friend ostream& operator<<(ostream &os, const Parella &parella);
 

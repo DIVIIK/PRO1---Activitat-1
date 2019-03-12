@@ -30,7 +30,6 @@ public:
 	void modificaCaramels(const bool caramels);
 
 	//Consultors
-	int consultaIdentificador() const;
 	Parella consultaParella(const int id) const;
 	string consultaSigles() const;
 	bool consultaCaramels() const;

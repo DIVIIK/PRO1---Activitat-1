@@ -43,14 +43,10 @@ void Comparsa::afegeixParella(const Parella &parella) {
 void Comparsa::modificaCaramels(const bool caramels) {
 	/* Pre: cert */
 	/* Post: */
-	this->caramels = caramels;
+	this->ecocaramels = caramels;
 }
 
 //Consultors
-int Comparsa::consultaIdentificador(){
-	return this->id;
-}
-
 Parella Comparsa::consultaParella(const int id) const {
 	/* Pre: cert */
 	/* Post: */
@@ -58,7 +54,7 @@ Parella Comparsa::consultaParella(const int id) const {
 	bool trobat = false;
 	int i = 0;
 	while (not trobat and i < this->nparelles) {
-		if (this->nparelles[i].id == id) {
+		if (this->parelles[i].consultaIdentificador() == id) {
 			p = this->parelles[i];
 			trobat = true;
 		}
@@ -76,22 +72,24 @@ string Comparsa::consultaSigles() const{
 bool Comparsa::consultaCaramels() const{
 	/* Pre: cert */
 	/* Post: */
-	return this->caramels;	
+	return this->ecocaramels;	
 }
 
-ostream& operator<<(ostream &os, const Comparsa &comparsa) {
-	os << "(" << this->sigles << ", " << this->nom << ", " << this->ecocaramels << ")" << endl
+ostream & operator << (ostream &os, const Comparsa &comparsa) {
+	os << "(" << comparsa.sigles << ", " << comparsa.nom << ", " << comparsa.ecocaramels << ")" << endl
 	<< "Llistat de parelles: " << endl;
 	
-	// Aixo es correcte?
-	for (int i = 0; i < this->parelles.size(); ++i) {
-		this->parelles[i];
-		if(i+1 < this->parelles.size()) cout << endl;
+	for (int i = 0; i < comparsa.parelles.size(); ++i) {
+		comparsa.parelles[i];
+		if(i+1 < comparsa.parelles.size())
+			os << cout << endl;
 	}
 
+	return os;
 }
 
+/*
 // Repasar
 istream& operator>>(istream &is, Comparsa &comparsa) {
 	is >> this->sigles >> this->nom >> this->ecocaramels >> this->parelles;
-}
+}*/
