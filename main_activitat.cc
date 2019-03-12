@@ -80,6 +80,7 @@ void canviarEcocaramel(const vector<Comparsa> &comparses) {
   while(not trobat and i < comparses.size()) {
     if (comparses[i].consultaSigles() == sigles) {
       comparses[i].modificaCaramels(!comparses[i].consultaCaramels());
+      cout << "Canviada la informació ecoCarament a la Comparsa : " << sigles << endl;
       trobat = true;
     }
     ++i;
