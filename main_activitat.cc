@@ -62,6 +62,10 @@ void afegirParella(vector<Comparsa> &comparses) {
 void mostrarTotesComparses(const vector<Comparsa> &comparses) {
   /* Pre: vector amb les comparses */
   /* Post: imprimeix pel canal estandar de sortida les dades de totes les comparses */
+  cout << "Llistat de Comparsas:" << endl;
+  for (unsigned int i = 0; i < comparses.size(); ++i) {
+    cout << comparses[i] << endl;
+  }
 }
 
 void mostrarEcocaramel(const vector<Comparsa> &comparses) {
