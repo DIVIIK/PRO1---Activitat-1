@@ -27,11 +27,12 @@ public:
 	//Modificadors
 	void afegeixParella(const Parella &parella);
 
-	void modificaCarmels();
+	void modificaCaramels(const bool caramels);
 
 	//Consultors
 	Parella consultaParella(const int id) const;
 	string consultaSigles() const;
+	bool consultaCaramels() const;
 
 	friend ostream& operator<<(ostream &os, const Comparsa &comparsa);
 

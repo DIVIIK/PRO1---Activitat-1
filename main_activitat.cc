@@ -68,9 +68,24 @@ void mostrarTotesComparses(const vector<Comparsa> &comparses) {
   }
 }
 
-void mostrarEcocaramel(const vector<Comparsa> &comparses) {
+void canviarEcocaramel(const vector<Comparsa> &comparses) {
   /* Pre: vector amb les comparses */
-  /* Post: imprimeix pel canal estandar de sortida si la comparsa té ecocaramel */
+  /* Post: canvia el valor del ecocaramel de la comparsa introduida per l'usuari */
+  string sigles;
+  unsigned int i = 0;
+  bool trobat = false;
+  Comparsa comparsa;
+  cin >> sigles;
+
+  while(not trobat and i < comparses.size()) {
+    if (comparses[i].consultaSigles() == sigles) {
+      comparses[i].modificaCaramels(!comparses[i].consultaCaramels());
+      trobat = true;
+    }
+    ++i;
+  }
+
+  if (not trobat) cout << "No s'ha trobat la Comparsa " << sigles << endl;
 }
 
 int main() {
@@ -94,7 +109,7 @@ int main() {
           mostrarTotesComparses(comparses);
           break;
         case -4:
-          mostrarEcocaramel(comparses);
+          canviarEcocaramel(comparses);
           break;
         default:
           cout << "Opcio no implementada" << endl;
