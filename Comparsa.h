@@ -34,6 +34,8 @@ public:
 	string consultaSigles() const;
 	bool consultaCaramels() const;
 
+	void consultaComparsa() const;
+
 	friend ostream& operator<<(ostream &os, const Comparsa &comparsa);
 
 	friend istream& operator>>(istream &is, Comparsa &comparsa);
