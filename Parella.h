@@ -6,7 +6,7 @@ using namespace std;
 class Parella {
 
 private:
-    typedef struct Membre membre;
+    typedef struct Membre Membre;
     vector<Membre> membres;
     int id;
     int nmembres;

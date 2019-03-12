@@ -1,10 +1,10 @@
 #include "Parella.h"
 using namespace std;
 
-typedef struct Membre{
+struct Membre {
         string nom;
         string dni;
-    } Membre;
+    };
 
 Parella::Parella(){
 	/* Pre: cert */
