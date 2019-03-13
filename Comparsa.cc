@@ -82,7 +82,7 @@ ostream & operator << (ostream &os, const Comparsa &comparsa) {
 	for (int i = 0; i < comparsa.parelles.size(); ++i) {
 		comparsa.parelles[i];
 		if(i+1 < comparsa.parelles.size())
-			os << cout << endl;
+			os << cout << endl; // Esta mierda que es????????????
 	}
 	return os;
 }
