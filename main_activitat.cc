@@ -51,20 +51,33 @@ void afegirParella(vector<Comparsa> &comparses) {
     }
   }
 
+  Parella p;
+  cin >> p;
+
   if (not trobat) cout << "No s'ha trobat la Comparsa " << sigles << endl;
   else {
-    Parella p;
-    cin >> p;
-    comparses[i].afegeixParella(p);
-    cout << "Parella " << p << endl;
-    cout << " afegida a " << sigles << endl;
+
+    int j = 0;
+    trobat = false;
+    while (not trobat and j < comparses[i].consultanParelles() ) {
+      if (comparses[i].existeixParella(p.consultaIdentificador()))
+        trobat = true;
+      ++j;
+    }
+    if (trobat)
+      cout << "Aquesta Parella no es pot afegir " << sigles << endl;
+    else {
+      comparses[i].afegeixParella(p);
+      cout << "Parella " << p << endl;
+      cout << " afegida a : " << sigles << endl;
+    }
   }
 }
 
 void mostrarTotesComparses(const vector<Comparsa> &comparses) {
   /* Pre: vector amb les comparses */
   /* Post: imprimeix pel canal estandar de sortida les dades de totes les comparses */
-  cout << "Llistat de Comparsas:" << endl;
+  cout << "Llistat de Comparsas: \n" << endl;
   for (unsigned int i = 0; i < comparses.size(); ++i) {
     cout << comparses[i] << endl;
   }

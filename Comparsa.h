@@ -31,8 +31,10 @@ public:
 
 	//Consultors
 	Parella consultaParella(const int id) const;
+	bool existeixParella(const int id) const;
 	string consultaSigles() const;
 	bool consultaCaramels() const;
+	int consultanParelles() const;
 
 	friend ostream& operator<<(ostream &os, const Comparsa &comparsa);
 

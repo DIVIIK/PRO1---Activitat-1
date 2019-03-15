@@ -6,14 +6,14 @@ Parella::Parella(){
 	/* Pre: cert */
 	/* Post: el resultat es un cami buit (de longitud 0) */
 	this->nmembres = 0;
-    this->membres = vector< vector< string > >(MAX_MEMBRES);
+    this->membres = vector< vector< string > >(MAX_MEMBRES, vector< string >(2));
 }
 
 Parella::Parella(int id){
 	/* Pre: cert */
 	/* Post: el resultat es un cami buit (de longitud 0) */
 	this->nmembres = 0;
-    this->membres = vector< vector< string > >(MAX_MEMBRES);
+    this->membres = vector< vector< string > >(MAX_MEMBRES, vector< string >(2));
     this->id = id;
 }
 

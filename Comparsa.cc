@@ -5,7 +5,8 @@ Comparsa::Comparsa() {
 	/* Pre: cert */
 	/* Post: */
 	this->nparelles = 0;
-    this->parelles = vector<Parella>(MAX_PARELLES);
+  this->parelles = vector<Parella>(MAX_PARELLES);
+	this->ecocaramels = false;
 }
 
 Comparsa::Comparsa(const string &nom) {
@@ -14,6 +15,7 @@ Comparsa::Comparsa(const string &nom) {
 	this->nparelles = 0;
     this->parelles = vector<Parella>(MAX_PARELLES);
     this->nom = nom;
+		this->ecocaramels = false;
 }
 
 Comparsa::Comparsa(const string &sigles, const string &nom, const bool ecocaramels) {
@@ -75,11 +77,23 @@ bool Comparsa::consultaCaramels() const{
 	return this->ecocaramels;
 }
 
+int Comparsa::consultanParelles() const{
+	return this->nparelles;
+}
+
+bool Comparsa::existeixParella(const int id) const {
+	for (int i = 0; i < this->nparelles; ++i) {
+		if (this->parelles[i].consultaIdentificador() == id)
+			return true;
+	}
+	return false;
+}
+
 ostream & operator << (ostream &os, const Comparsa &comparsa) {
 	os << "(" << comparsa.sigles << ", " << comparsa.nom << ", " << comparsa.ecocaramels << ")" << endl
-	<< "Llistat de parelles: " << endl;
+	<< "Llistat de Parelles:" << endl;
 
-	for (int i = 0; i < comparsa.parelles.size(); ++i) {
+	for (int i = 0; i < comparsa.nparelles; ++i) {
 		os << comparsa.parelles[i];
 		if(i+1 < comparsa.parelles.size())
 			os << endl;
@@ -88,6 +102,9 @@ ostream & operator << (ostream &os, const Comparsa &comparsa) {
 }
 
 istream& operator>>(istream &is, Comparsa &comparsa) {
-	is >> comparsa.sigles;
+	is >> comparsa.nom;
+	for (int i = 0; i < 4; ++i) {
+		comparsa.sigles += toupper(comparsa.nom[i]);
+	}
 	return is;
 }
