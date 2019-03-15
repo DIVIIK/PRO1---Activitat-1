@@ -70,7 +70,7 @@ void mostrarTotesComparses(const vector<Comparsa> &comparses) {
   }
 }
 
-void canviarEcocaramel(const vector<Comparsa> &comparses) {
+void canviarEcocaramel(vector<Comparsa> &comparses) {
   /* Pre: vector amb les comparses */
   /* Post: canvia el valor del ecocaramel de la comparsa introduida per l'usuari */
   string sigles;

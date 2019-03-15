@@ -72,17 +72,17 @@ string Comparsa::consultaSigles() const{
 bool Comparsa::consultaCaramels() const{
 	/* Pre: cert */
 	/* Post: */
-	return this->ecocaramels;	
+	return this->ecocaramels;
 }
 
 ostream & operator << (ostream &os, const Comparsa &comparsa) {
 	os << "(" << comparsa.sigles << ", " << comparsa.nom << ", " << comparsa.ecocaramels << ")" << endl
 	<< "Llistat de parelles: " << endl;
-	
+
 	for (int i = 0; i < comparsa.parelles.size(); ++i) {
-		comparsa.parelles[i];
+		os << comparsa.parelles[i];
 		if(i+1 < comparsa.parelles.size())
-			os << cout << endl; // Esta mierda que es????????????
+			os << endl;
 	}
 	return os;
 }

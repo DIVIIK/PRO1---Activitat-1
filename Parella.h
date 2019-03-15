@@ -6,28 +6,28 @@ using namespace std;
 class Parella {
 
 private:
-    typedef struct Membre Membre;
-    vector<Membre> membres;
+
+    vector< vector< string > > membres;
     int id;
     int nmembres;
     const static int MAX_MEMBRES = 2;
 
 public:
 
+
     //Constructors
     Parella();
 
     Parella(const int id);
 
-    Parella(const int id, const Membre &membre1, const Membre &membre2);
+    Parella(const int id, const string name1, const string dni1, const string name2, const string dni2);
 
     ~Parella();
 
     //Modificadors
-    void afegeixMembre(const Membre &membre);
+    void afegeixMembre(const string &name, const string &dni);
 
     //Consultors
-    Membre consultaMembre(const string &dni) const;
 
     int consultaIdentificador() const;
 
