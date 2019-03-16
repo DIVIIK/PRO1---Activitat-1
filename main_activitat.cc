@@ -6,7 +6,7 @@ using namespace std;
 
 void creaComparses(vector<Comparsa> &comparses) {
   /* Pre: comparses es un vector de Comparsa */
-  /* Post: el vector comparses conté les comparses entrades per l'usuari */
+  /* Post: El vector comparses conté les comparses entrades per l'usuari */
   int n;
   cin >> n;
   comparses.resize(n);
@@ -16,8 +16,8 @@ void creaComparses(vector<Comparsa> &comparses) {
 }
 
 void mostrarComparsa(const vector<Comparsa> &comparses) {
-  /* Pre: vector amb les comparses */
-  /* Post: imprimeix pel canal estandar de sortida les dades de la comparsa */
+  /* Pre: Vector amb les comparses */
+  /* Post: Imprimeix pel canal estandar de sortida les dades de la comparsa si aquesta existeix */
   string sigles;
   unsigned int i = 0;
   bool trobat = false;
@@ -35,8 +35,8 @@ void mostrarComparsa(const vector<Comparsa> &comparses) {
 }
 
 bool comprovaParellaValida(const Parella &p, const Comparsa &comparsa) {
-	// PRE:		Parella a introduir no esta vuida
-	// POST: 	Si la parella es valida per ser afegida, retorna true, sino false
+  /* Pre:   p es la Parella a introduir, no es vuida. Comparsa amb la comparsa desti*/
+  /* Post:  Si la parella es valida per ser afegida, retorna true, sino false */
 	bool valid = true;
     int j = 0;
 
@@ -61,8 +61,8 @@ bool comprovaParellaValida(const Parella &p, const Comparsa &comparsa) {
 }
 
 void afegirParella(vector<Comparsa> &comparses) {
-  /* Pre: vector amb les comparses */
-  /* Post: nova parella afegida a la comparsa */
+  /* Pre: Vector amb les comparses */
+  /* Post: Nova parella afegida a la comparsa */
   string sigles;
   unsigned int i = 0;
   bool trobat = false;
@@ -124,7 +124,6 @@ void canviarEcocaramel(vector<Comparsa> &comparses) {
 }
 
 int main() {
-
     vector<Comparsa> comparses;
     int opcio;
 

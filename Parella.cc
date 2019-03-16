@@ -33,6 +33,7 @@ Parella::~Parella(){
 }
 
 void Parella::afegeixMembre(const string &name, const string &dni){
+	/* Pre: El nom del membre i el seu dni */
 	if (this->nmembres < this->MAX_MEMBRES) {
 		this->membres[this->nmembres][0] = name;
 		this->membres[this->nmembres][1] = dni;
@@ -41,10 +42,14 @@ void Parella::afegeixMembre(const string &name, const string &dni){
 }
 
 int Parella::consultaIdentificador() const{
+	/* Pre: cert */
+	/* Post: Retorna l'identificador de la parella */
 	return this->id;
 }
 
 vector< vector< string > > Parella::consultaMembres() const {
+	/* Pre: cert */
+	/* Post: Retorna un vector de vectors amb els dos membres (nom i dni) */
 	return this->membres;
 }
 
