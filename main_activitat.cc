@@ -34,6 +34,32 @@ void mostrarComparsa(const vector<Comparsa> &comparses) {
   if (not trobat) cout << "No s'ha trobat la Comparsa " << sigles << endl;
 }
 
+bool comprovaParellaValida(const Parella &p, const Comparsa &comparsa) {
+	// PRE:		Parella a introduir no esta vuida
+	// POST: 	Si la parella es valida per ser afegida, retorna true, sino false
+	bool valid = true;
+    int j = 0;
+
+    while (j < comparsa.consultanParelles() ) {
+      	if (comparsa.existeixParella(p.consultaIdentificador()))
+        	valid = false;
+
+ 		vector<Parella> parelles = comparsa.consultaParelles();
+    	
+    	for (int i = 0; i < parelles.size(); ++i) {
+    		vector< vector< string > > membres = parelles[i].consultaMembres();
+    		if (membres[0][1] == p.consultaMembres()[0][1] 
+    			or membres[0][1] == p.consultaMembres()[1][1]
+    			or membres[1][1] == p.consultaMembres()[0][1] 
+    			or membres[1][1] == p.consultaMembres()[1][1])
+    			valid = false;
+    	}
+    	++j;
+    }
+
+	return valid;
+}
+
 void afegirParella(vector<Comparsa> &comparses) {
   /* Pre: vector amb les comparses */
   /* Post: nova parella afegida a la comparsa */
@@ -45,8 +71,7 @@ void afegirParella(vector<Comparsa> &comparses) {
   while(not trobat and i < comparses.size()) {
     if (comparses[i].consultaSigles() == sigles) {
       trobat = true;
-    }
-    else {
+    } else {
       ++i;
     }
   }
@@ -57,14 +82,8 @@ void afegirParella(vector<Comparsa> &comparses) {
   if (not trobat) cout << "No s'ha trobat la Comparsa " << sigles << endl;
   else {
 
-    int j = 0;
-    trobat = false;
-    while (not trobat and j < comparses[i].consultanParelles() ) {
-      if (comparses[i].existeixParella(p.consultaIdentificador()))
-        trobat = true;
-      ++j;
-    }
-    if (trobat)
+  	bool parellaValida = comprovaParellaValida(p, comparses[i]);
+    if (not parellaValida)
       cout << "Aquesta Parella no es pot afegir " << sigles << endl;
     else {
       comparses[i].afegeixParella(p);

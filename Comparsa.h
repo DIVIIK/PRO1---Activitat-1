@@ -31,7 +31,9 @@ public:
 
 	//Consultors
 	Parella consultaParella(const int id) const;
+	vector<Parella> consultaParelles() const;
 	bool existeixParella(const int id) const;
+	bool dadesRepetides(const int id) const;
 	string consultaSigles() const;
 	bool consultaCaramels() const;
 	int consultanParelles() const;

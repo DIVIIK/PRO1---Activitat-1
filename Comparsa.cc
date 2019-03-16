@@ -81,6 +81,10 @@ int Comparsa::consultanParelles() const{
 	return this->nparelles;
 }
 
+vector<Parella> Comparsa::consultaParelles() const {
+	return this->parelles;
+}
+
 bool Comparsa::existeixParella(const int id) const {
 	for (int i = 0; i < this->nparelles; ++i) {
 		if (this->parelles[i].consultaIdentificador() == id)

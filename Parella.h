@@ -30,6 +30,7 @@ public:
     //Consultors
 
     int consultaIdentificador() const;
+    vector< vector< string > > consultaMembres() const;
 
     friend ostream& operator<<(ostream &os, const Parella &parella);
 

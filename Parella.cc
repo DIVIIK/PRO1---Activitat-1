@@ -44,6 +44,10 @@ int Parella::consultaIdentificador() const{
 	return this->id;
 }
 
+vector< vector< string > > Parella::consultaMembres() const {
+	return this->membres;
+}
+
 ostream& operator<<(ostream &os, const Parella &parella) {
 	os << parella.id << " " << parella.membres[0][0] <<
 		" " << parella.membres[1][0] << " " << parella.membres[0][1] <<
