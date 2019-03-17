@@ -8,7 +8,7 @@ class Comparsa {
 private:
 	const static int MAX_PARELLES = 40;
 
-	int nparelles;
+	unsigned int nparelles;
 	string sigles;
 	string nom;
 	bool ecocaramels;

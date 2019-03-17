@@ -9,7 +9,7 @@ private:
 
     vector< vector< string > > membres;
     int id;
-    int nmembres;
+    unsigned int nmembres;
     const static int MAX_MEMBRES = 2;
 
 public:

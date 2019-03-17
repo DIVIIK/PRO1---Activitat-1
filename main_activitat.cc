@@ -41,12 +41,12 @@ bool comprovaParellaValida(const Parella &p, const Comparsa &comparsa) {
     int j = 0;
 
     while (j < comparsa.consultanParelles() ) {
-      	if (comparsa.existeixParella(p.consultaIdentificador()))
+      	if (comparsa.existeixParella(p.consultaIdentificador())) {
         	valid = false;
+	}
+ 	vector<Parella> parelles = comparsa.consultaParelles();
 
- 		vector<Parella> parelles = comparsa.consultaParelles();
-    	
-    	for (int i = 0; i < parelles.size(); ++i) {
+    	for (unsigned int i = 0; i < parelles.size(); ++i) {
     		vector< vector< string > > membres = parelles[i].consultaMembres();
     		if (membres[0][1] == p.consultaMembres()[0][1] 
     			or membres[0][1] == p.consultaMembres()[1][1]
